@@ -1,4 +1,4 @@
-package oop_OSS;
+ppackage oop_OSS;
 
 import java.util.ArrayList;
 
@@ -27,7 +27,7 @@ interface choiceInlist {
 class customerChoice implements catalogList, choiceInlist {
 
 	String Cid;
-	double total = 0;
+	double total = 0; 
 
 	@Override
 	public void catalogList(String Cidin) {
@@ -53,6 +53,7 @@ class customerChoice implements catalogList, choiceInlist {
 				String ItemName = "Iphone";
 				double priceitem = 865.32;
 				int fistItem = Integer.parseInt(amount);
+				total+=priceitem*fistItem;
 				itemQ.add(fistItem);
 				itemId.add(IdItem);
 				itemName.add(ItemName);
@@ -71,6 +72,7 @@ class customerChoice implements catalogList, choiceInlist {
 				double priceitem = 999;
 				pricePeritem.add(priceitem);
 				int secondItem = Integer.parseInt(amount);
+				total+=priceitem*secondItem;
 				itemId.add(IdItem);
 				itemQ.add(secondItem);
 				itemName.add(ItemName);
@@ -88,6 +90,7 @@ class customerChoice implements catalogList, choiceInlist {
 				double priceitem = 100;
 				pricePeritem.add(priceitem);
 				int thridItem = Integer.parseInt(amount);
+				total+=priceitem*thridItem;
 				itemId.add(IdItem);
 				itemQ.add(thridItem);
 				itemName.add(ItemName);
@@ -105,6 +108,7 @@ class customerChoice implements catalogList, choiceInlist {
 				double priceitem = 299.9;
 				pricePeritem.add(priceitem);
 				int fourthItem = Integer.parseInt(amount);
+				total+=priceitem*fourthItem;
 				itemId.add(IdItem);
 				itemQ.add(fourthItem);
 				itemName.add(ItemName);
@@ -121,6 +125,7 @@ class customerChoice implements catalogList, choiceInlist {
 				double priceitem = 325.2;
 				pricePeritem.add(priceitem);
 				int fivthItem = Integer.parseInt(amount);
+				total+=priceitem*fivthItem;
 				itemId.add(IdItem);
 				itemQ.add(fivthItem);
 				itemName.add(ItemName);
@@ -132,10 +137,6 @@ class customerChoice implements catalogList, choiceInlist {
 		} else {
 			System.out.println("The customer does not select item and exits");
 			System.exit(0);
-		}
-		for (int i = 0; i < pricePeritem.size(); i++) {
-			total = pricePeritem.get(i) * itemQ.get(i);
-			total = total + total;
 		}
 
 	}
